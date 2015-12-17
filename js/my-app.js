@@ -7,7 +7,9 @@ var mainView = myApp.addView('.view-main', {
 });
 
 myApp.onPageInit('about', function (page) {
-
+  $$('.create-page').on('click', function () {
+    createContentPage();
+  });
 });
 
 var dynamicPageIndex = 0;
