@@ -1,0 +1,53 @@
+Structure Main:
+
+html >
+head > (
+meta[charset="utf=8"] +
+meta[name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"] +
+meta[name="apple-mobile-web-app-capable" content="yes"] +
+meta[name="theme-color" content="#2196f3"] +
+title{My App} +
+link[rel="stylesheet" href="path/to/framework7.material.min.css"] +
+link[rel="stylesheet" href="path/to/framework7.material.colors.min.css"] +
+link[rel="stylesheet" href="path/to/my-app.css"]
+) +
+body > ( (
+div.views >
+div.view.view-main >
+div.pages.navbar-fixed.toolbar-fixed >
+div.page[data-page="index"] > (
+(div.navbar > div.navbar-inner > div.center{Awesome App}) +
+(div.toolbar > div.toolbar-inner > a.link[href="#"]*2{Link $}) +
+(div.page-content > (p{Page content goes here} + a[href="about.html"]{About app}))
+)
+) +
+script[type="text/javascript" src="path/to/framework7.min.js"] +
+script[type="text/javascript" src="path/to/my-app.js"]
+)
+
+Query Main:
+
+html>head>(meta[charset="utf=8"]+meta[name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"]+meta[name="apple-mobile-web-app-capable" content="yes"]+title{My App}+meta[name="theme-color" content="#2196f3"]+link[rel="stylesheet" href="path/to/framework7.material.min.css"]+link[rel="stylesheet" href="path/to/framework7.material.colors.min.css"]+link[rel="stylesheet" href="path/to/my-app.css"])+body>((div.views>div.view.view-main>div.pages.navbar-fixed.toolbar-fixed>div.page[data-page="index"]>((div.navbar>div.navbar-inner>div.center{Awesome App})+(div.toolbar>div.toolbar-inner>a.link[href="#"]*2{Link $})+(div.page-content>(p{Page content goes here}+a[href="about.html"]{About app}))))+script[type="text/javascript" src="path/to/framework7.min.js"]+script[type="text/javascript" src="path/to/my-app.js"])
+
+____________________________________
+
+Structure About:
+
+div.navbar>
+div.navbar-inner>
+div.left>
+(a.back.link[href="#"]>
+(i.icon.icon-back+
+span{Back}))^
+div.center.sliding{About}+
+div.right>
+a.link.icon-only.open-panel[href="#"]>i.icon.icon-bars^^^
+div.pages>
+div.page[data-page="about"]>
+div.page-content>
+div.content-block>
+p{Here is About page!}+
+p>lorem
+
+Query About:
+div.navbar>div.navbar-inner>div.left>(a.back.link[href="#"]>(i.icon.icon-back+span{Back}))^div.center.sliding{About}+div.right>a.link.icon-only.open-panel[href="#"]>i.icon.icon-bars^^^div.pages>div.page[data-page="about"]>div.page-content>div.content-block>p{Here is About page!}+p>lorem
