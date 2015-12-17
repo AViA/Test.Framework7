@@ -7,7 +7,7 @@ var mainView = myApp.addView('.view-main', {
 });
 
 myApp.onPageInit('about', function (page) {
-  $$('.create-page').on('click', function () {
+  $$('.create-page').on('tap', function () {
     createContentPage();
   });
 });
