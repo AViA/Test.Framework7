@@ -1,4 +1,4 @@
-var myApp =  new Fraamework7();
+var myApp =  new Framework7();
 
 var $$ = Dom7;
 
